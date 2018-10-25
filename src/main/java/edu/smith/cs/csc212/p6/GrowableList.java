@@ -1,5 +1,6 @@
 package edu.smith.cs.csc212.p6;
 
+import edu.smith.cs.csc212.p6.errors.BadIndexError;
 import edu.smith.cs.csc212.p6.errors.P6NotImplemented;
 
 public class GrowableList<T> implements P6List<T> {
@@ -10,6 +11,7 @@ public class GrowableList<T> implements P6List<T> {
 	public GrowableList() {
 		this.array = new Object[START_SIZE];
 		this.fill = 0;
+		
 	}
 
 	@Override
@@ -19,7 +21,7 @@ public class GrowableList<T> implements P6List<T> {
 
 	@Override
 	public T removeBack() {
-		throw new P6NotImplemented();
+		throw new BadIndexError();
 	}
 
 	@Override
